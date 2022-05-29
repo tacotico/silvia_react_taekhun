@@ -6,14 +6,15 @@ const GlobalStyle = createGlobalStyle`
 
   *  {
     box-sizing: border-box;
-    font-size:62.5%;
     -webkit-tap-highlight-color:transparent;
-
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     -webkit-appearance: none; /* iOS box-shadow */
   }
 
+  html {
+    font-size:62.5%; // for easily calculate px-rem
+  }
 
   a {
     text-decoration-line:none;
@@ -35,9 +36,10 @@ const GlobalStyle = createGlobalStyle`
 
   body{
     overflow:auto;
-    /* font-family: 'Apple SD Gothic Neo','-apple-system','BlinkMacSystemFont','Spoqa Han Sans Neo','Malgun Gothic','sans-serif'; */
-    min-height: 100vh;
     touch-action: pan-y;
+    font-family: 'Roboto';
+
+    min-height: 100vh;
     
     /* ios vh issue fix */
     @supports (-webkit-appearance: none) and (stroke-color: transparent) {
