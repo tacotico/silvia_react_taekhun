@@ -1,10 +1,20 @@
-import React from 'react';
+import ClientPage from '@pages/ClientPage';
+import HomePage from '@pages/HomePage';
+import MainLayout from '@pages/MainLayout';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 const App = () => {
   return (
-    <>
-      <div className='App'>React-CRA-Typescript-Styled-Component Template</div>
-    </>
+    <Router>
+      <MainLayout>
+        <Routes>
+          <Route path='/' element={<Navigate replace to='/home' />} />
+          <Route path='/home' element={<HomePage />} />
+          <Route path='/client' element={<ClientPage />} />
+          <Route path='/*' element={<Navigate replace to='/home' />} />
+        </Routes>
+      </MainLayout>
+    </Router>
   );
 };
 
