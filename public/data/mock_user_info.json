@@ -1,0 +1,19 @@
+{
+  "user1": {
+    "nickname": "남택훈",
+    "age": 26,
+    "tel": "010-0000-0000",
+    "sex": "남성",
+    "birth": "1997.08.13",
+    "profileImg": "https://avatars.githubusercontent.com/u/19265753?v=4"
+  },
+
+  "user2": {
+    "nickname": "김레고",
+    "age": 25,
+    "tel": "010-0000-0000",
+    "sex": "남성",
+    "birth": "1998.01.01",
+    "profileImg": "https://randomuser.me/api/portraits/lego/1.jpg"
+  }
+}

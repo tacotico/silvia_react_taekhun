@@ -20,3 +20,7 @@ export const userInfoKor = {
   sex: '성별',
   birth: '생년월일',
 };
+
+export const USER_INFO_ENDPOINT = '/data/mock_user_info.json';
+
+export const SESSION_LIST_ENDPOINT = '/data/mock_session_list.json';
