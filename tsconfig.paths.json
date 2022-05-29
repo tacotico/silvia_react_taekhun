@@ -10,8 +10,8 @@
       "@assets": ["src/assets"],
       "@assets/*": ["src/assets/*"],
       "@styles/*": ["src/styles/*"],
-      "@types": ["src/types"],
-      "@types/*": ["src/types/*"],
+      "@customTypes": ["src/types"],
+      "@customTypes/*": ["src/types/*"],
       "@hooks/*": ["src/hooks/*"]
     }
   }
