@@ -12,7 +12,7 @@ import { getUserInfo } from '@lib/api/user';
 import { getSessionList } from '@lib/api/session';
 import { SessionType } from '@customTypes/session';
 import StatisticsListContainer from '@components/ClientPage/StatisticsListContainer';
-import ContentUsageGraphContainer from '@components/ClientPage/GraphContainer';
+import ContentUsageGraphContainer from '@components/ClientPage/ChartContainer';
 
 interface Props {}
 
