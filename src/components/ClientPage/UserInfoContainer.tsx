@@ -21,7 +21,6 @@ const UserInfoContainer = ({ userInfo }: Props) => {
         <UserInfoBox>
           <InfoBoxRow1>
             <Nickname>{userInfo.nickname}</Nickname>
-            <NicknameEditButton>button</NicknameEditButton>
           </InfoBoxRow1>
           <InfoBoxRow2>
             {userInfoList?.map(([label, data], key) => (
@@ -76,7 +75,6 @@ const Nickname = styled.h2`
   font-size: 3rem;
   font-weight: 500;
 `;
-const NicknameEditButton = styled.button``;
 
 const TextWrapper = styled.div`
   display: flex;

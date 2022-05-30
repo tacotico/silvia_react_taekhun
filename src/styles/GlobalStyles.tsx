@@ -37,7 +37,6 @@ const GlobalStyle = createGlobalStyle`
   body{
     overflow:auto;
     touch-action: pan-y;
-    font-family: 'Roboto';
 
     min-height: 100vh;
     

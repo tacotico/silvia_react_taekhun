@@ -1,6 +1,6 @@
+import { Layout } from 'antd';
 import Header from '@components/commons/Header';
 import Sidebar from '@components/commons/Sidebar';
-import { Layout } from 'antd';
 import styled from 'styled-components';
 
 const { Content: AntdContent } = Layout;

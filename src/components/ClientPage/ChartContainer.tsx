@@ -11,7 +11,7 @@ interface Props {
 }
 
 const ChartContainer = ({ chartList }: Props) => {
-  const [selectedType, setSelectedType] = useState<string>('1');
+  const [selectedType, setSelectedType] = useState<string>('2');
 
   const onChangeType = useCallback((key: string) => {
     setSelectedType(key);

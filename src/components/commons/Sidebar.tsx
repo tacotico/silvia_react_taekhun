@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from 'react';
 import 'antd/dist/antd.min.css';
+import React, { useCallback, useState } from 'react';
 import { Layout, Menu } from 'antd';
 import styled from 'styled-components';
 import { MenuList } from '@lib/config/constants';
