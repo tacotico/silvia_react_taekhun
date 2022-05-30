@@ -4,6 +4,9 @@ import { useRecoilValue } from 'recoil';
 import { isLoggedInState } from '@store/user';
 import { ROUTES } from '@lib/config/constants';
 import MainLayout from '@pages/MainLayout';
+import styled from 'styled-components';
+import { Spin } from 'antd';
+
 const ClientPage = lazy(() => import('@pages/ClientPage'));
 const HomePage = lazy(() => import('@pages/HomePage'));
 
@@ -12,7 +15,13 @@ const App = () => {
 
   return (
     <Router>
-      <Suspense fallback={<></>}>
+      <Suspense
+        fallback={
+          <Fallback>
+            <Spin />
+          </Fallback>
+        }
+      >
         <MainLayout>
           <Routes>
             <Route path={ROUTES.base} element={<Navigate replace to={ROUTES.home} />} />
@@ -47,5 +56,10 @@ const PrivateRoute = ({ isLoggedIn, children }: IPrivateRoute) => {
   }
   return <>{children}</>;
 };
+
+const Fallback = styled.div`
+  height: 100vh;
+  ${({ theme: { flexMixin } }) => flexMixin('column')};
+`;
 
 export default App;

@@ -6,7 +6,7 @@ import Icon from '@components/commons/Icon';
 import logoImgSrc from '@assets/icons/logo.svg';
 import { useRecoilValue } from 'recoil';
 import { userInfoSelector } from '@store/user';
-
+import { Suspense } from 'react';
 const { Header: AntdHeader } = Layout;
 
 const Header = () => {
@@ -23,7 +23,10 @@ const Header = () => {
       <Badge count={1} size='small'>
         <Button type='default' style={{ border: 'none' }} icon={<BellOutlined style={{ fontSize: '22px' }} />} />
       </Badge>
-      <Avatar src={userInfo?.profileImg} />
+
+      <Suspense fallback={<Avatar />}>
+        <Avatar src={userInfo?.profileImg} />
+      </Suspense>
     </Wrapper>
   );
 };
@@ -36,6 +39,7 @@ const Wrapper = styled(AntdHeader)`
 `;
 
 const Logo = styled.div`
+  ${({ theme: { flexMixin } }) => flexMixin()};
   margin-right: auto;
 `;
 
