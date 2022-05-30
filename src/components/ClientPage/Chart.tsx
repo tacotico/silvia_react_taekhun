@@ -152,10 +152,11 @@ const Title = styled.h5`
 const ChartBox = styled.div`
   display: flex;
   align-items: center;
+  max-width: 120rem;
 `;
 
 const EmptyBox = styled.div`
-  height: 30rem;
+  height: 40rem;
 
   & p {
     margin-left: 1rem;
