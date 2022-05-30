@@ -40,7 +40,7 @@ const Sidebar = () => {
 };
 
 const StyledSider = styled(Sider)`
-  height: 100vh;
+  min-height: 100vh;
   overflow: auto;
 
   & .ant-layout-sider-trigger {
