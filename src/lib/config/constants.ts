@@ -9,9 +9,14 @@ import {
   workOutBlueImgSrc,
 } from '@assets/userStatistics';
 
+export const USER1_IMAGE_URL = 'https://avatars.githubusercontent.com/u/19265753?v=4';
+export const USER2_IMAGE_URL = 'https://randomuser.me/api/portraits/lego/1.jpg';
+
 export const ROUTES = {
+  base: '/',
   home: '/home',
   client: '/client',
+  etc: '/*',
 };
 
 export const MenuList = [
