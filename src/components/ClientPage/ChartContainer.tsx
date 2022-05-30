@@ -1,24 +1,28 @@
-import React, { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Tabs } from 'antd';
-import Graph from './Chart';
+import Chart from './Chart';
 import styled from 'styled-components';
-import { CHART_TYPE_LIST } from '@lib/config/constants';
+import { ChartType } from '@customTypes';
 
 const { TabPane } = Tabs;
 
-const ChartContainer = () => {
+interface Props {
+  chartList: ChartType[];
+}
+
+const ChartContainer = ({ chartList }: Props) => {
   const [selectedType, setSelectedType] = useState<string>('1');
 
-  const onChange = (key: string) => {
+  const onChangeType = useCallback((key: string) => {
     setSelectedType(key);
-  };
+  }, []);
 
   return (
     <Wrapper>
-      <Tabs onChange={onChange} defaultActiveKey={selectedType}>
-        {CHART_TYPE_LIST.map(({ type, data }, key) => (
+      <Tabs onChange={onChangeType} defaultActiveKey={selectedType}>
+        {chartList.map(({ type, data }, key) => (
           <TabPane tab={type} key={key}>
-            <Graph title={type} data={data} />
+            <Chart type={type} data={data} />
           </TabPane>
         ))}
       </Tabs>
