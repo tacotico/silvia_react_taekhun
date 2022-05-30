@@ -4,6 +4,9 @@ import { useCallback } from 'react';
 
 import { ROUTES } from '@lib/config/constants';
 import { useNavigate } from 'react-router';
+import { userInfoSelector } from '@store/user';
+import { useRecoilValue } from 'recoil';
+
 import UserInfoContainer from '@components/ClientPage/UserInfoContainer';
 import SessionListContainer from '@components/ClientPage/SessionListContainer';
 import StatisticsListContainer from '@components/ClientPage/StatisticsListContainer';
@@ -13,8 +16,9 @@ import useClient from '@hooks/useClient';
 interface Props {}
 
 const ClientPage = (props: Props) => {
-  const { userInfo, sessionList, statisticsList, chartList } = useClient('user2');
+  const userInfo = useRecoilValue(userInfoSelector);
 
+  const { sessionList, statisticsList, chartList } = useClient();
   const navigate = useNavigate();
   const handleBackClick = useCallback(() => {
     navigate(ROUTES.home);

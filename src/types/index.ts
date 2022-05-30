@@ -12,6 +12,7 @@ export type StatisticsTitleKeys =
   | '평균 메모 기록 횟수';
 
 export type UserInfoType = {
+  userId: string;
   nickname: string;
   age: number;
   tel: string;

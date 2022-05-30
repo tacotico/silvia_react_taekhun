@@ -1,24 +1,16 @@
 import { useEffect, useState } from 'react';
-import { UserInfoType, SessionType, ChartType, StatisticsType } from '@customTypes';
-import { getUserInfo } from '@lib/api/user';
+import { SessionType, ChartType, StatisticsType } from '@customTypes';
 import { getSessionList } from '@lib/api/session';
 import { getChartList } from '@lib/api/chart';
 import { getStatistics } from '@lib/api/statistics';
+import { useRecoilValue } from 'recoil';
+import { userIdState } from '@store/user';
 
-const useClient = (userId: string) => {
-  const [userInfo, setUserInfo] = useState<UserInfoType | null>(null);
+const useClient = () => {
+  const userId = useRecoilValue(userIdState) as string;
   const [sessionList, setSessionList] = useState<SessionType[] | []>([]);
   const [chartList, setChartList] = useState<ChartType[] | []>([]);
   const [statisticsList, setStatisticsList] = useState<StatisticsType[] | []>([]);
-
-  useEffect(() => {
-    const fetchUserInfo = async () => {
-      const res = await getUserInfo(userId);
-      res && setUserInfo(res);
-    };
-
-    fetchUserInfo();
-  }, [userId]);
 
   useEffect(() => {
     const fetchSessionList = async () => {
@@ -26,7 +18,7 @@ const useClient = (userId: string) => {
       res && setSessionList(res);
     };
 
-    fetchSessionList();
+    userId && fetchSessionList();
   }, [userId]);
 
   useEffect(() => {
@@ -35,7 +27,7 @@ const useClient = (userId: string) => {
       res && setChartList(res);
     };
 
-    fetchChartList();
+    userId && fetchChartList();
   }, [userId]);
 
   useEffect(() => {
@@ -44,11 +36,10 @@ const useClient = (userId: string) => {
       res && setStatisticsList(res);
     };
 
-    fetchStatisticsList();
+    userId && fetchStatisticsList();
   }, [userId]);
 
   return {
-    userInfo,
     sessionList,
     statisticsList,
     chartList,
