@@ -1,19 +1,12 @@
-import {
-  trainingImgSrc,
-  mealImgSrc,
-  meditationImgSrc,
-  sleepImgSrc,
-  memoImgSrc,
-  workOutRedImgSrc,
-  workOutBlueImgSrc,
-} from '@assets/userStatistics';
-import UserStatisticsIcon from '@assets/userStatistics/UserStatisticsIcon';
-import React from 'react';
 import styled from 'styled-components';
+import UserStatisticsIcon from '@assets/userStatistics/UserStatisticsIcon';
+import { StatisticsType } from '@customTypes';
 
-interface Props {}
+interface Props {
+  statisticsList: StatisticsType[];
+}
 
-const StatisticsListContainer = (props: Props) => {
+const StatisticsListContainer = ({ statisticsList }: Props) => {
   return (
     <Wrapper>
       <ItemList>
@@ -44,50 +37,5 @@ const ItemList = styled.ul`
 `;
 
 const Item = styled.li``;
-
-const statisticsList = [
-  {
-    imgSrc: trainingImgSrc,
-    title: '평균 인지 훈련 시간',
-    main: { count: 80, suffix: '분' },
-    sub: { prefix: '+', count: 20, suffix: '분' },
-  },
-  {
-    imgSrc: meditationImgSrc,
-    title: '평균 명상 훈련 시간',
-    main: { count: 80, suffix: '분' },
-    sub: { prefix: '+', count: 70, suffix: '분' },
-  },
-  {
-    imgSrc: workOutBlueImgSrc,
-    title: '평균 운동 시간',
-    main: { count: 80, suffix: '분' },
-    sub: { prefix: '+', count: 30, suffix: '분' },
-  },
-  {
-    imgSrc: workOutRedImgSrc,
-    title: '평균 운동 횟수',
-    main: { count: 2, suffix: '회' },
-    sub: { prefix: '-', count: 3, suffix: '회' },
-  },
-  {
-    imgSrc: mealImgSrc,
-    title: '평균 식사 기록 횟수',
-    main: { count: 0, suffix: '회' },
-    sub: { prefix: '-', count: 3, suffix: '회' },
-  },
-  {
-    imgSrc: sleepImgSrc,
-    title: '평균 수면 시간',
-    main: { count: 80, suffix: '시간' },
-    sub: { prefix: '+', count: 20, suffix: '시간' },
-  },
-  {
-    imgSrc: memoImgSrc,
-    title: '평균 메모 기록 횟수',
-    main: { count: 7, suffix: '회' },
-    sub: { prefix: '+', count: 3, suffix: '회' },
-  },
-];
 
 export default StatisticsListContainer;

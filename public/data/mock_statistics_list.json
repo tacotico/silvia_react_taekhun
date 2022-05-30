@@ -1,0 +1,39 @@
+{
+  "user1": [
+    {
+      "title": "평균 인지 훈련 시간",
+      "main": { "count": 80, "suffix": "분" },
+      "sub": { "prefix": "+", "count": 20, "suffix": "분" }
+    },
+    {
+      "title": "평균 명상 훈련 시간",
+      "main": { "count": 80, "suffix": "분" },
+      "sub": { "prefix": "+", "count": 70, "suffix": "분" }
+    },
+    {
+      "title": "평균 운동 시간",
+      "main": { "count": 80, "suffix": "분" },
+      "sub": { "prefix": "+", "count": 30, "suffix": "분" }
+    },
+    {
+      "title": "평균 운동 횟수",
+      "main": { "count": 2, "suffix": "회" },
+      "sub": { "prefix": "-", "count": 3, "suffix": "회" }
+    },
+    {
+      "title": "평균 식사 기록 횟수",
+      "main": { "count": 0, "suffix": "회" },
+      "sub": { "prefix": "-", "count": 3, "suffix": "회" }
+    },
+    {
+      "title": "평균 수면 시간",
+      "main": { "count": 80, "suffix": "시간" },
+      "sub": { "prefix": "+", "count": 20, "suffix": "시간" }
+    },
+    {
+      "title": "평균 메모 기록 횟수",
+      "main": { "count": 7, "suffix": "회" },
+      "sub": { "prefix": "+", "count": 3, "suffix": "회" }
+    }
+  ]
+}
