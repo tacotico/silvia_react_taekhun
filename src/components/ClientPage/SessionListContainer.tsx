@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Table } from 'antd';
 import type { ColumnsType } from 'antd/lib/table';
-import { SessionType } from '@customTypes/session';
+import { SessionType } from '@customTypes';
 import styled from 'styled-components';
 
 interface Props {

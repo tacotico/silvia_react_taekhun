@@ -33,13 +33,6 @@ const Wrapper = styled.ul`
   padding-right: 0;
 `;
 
-const Title = styled.p`
-  font-weight: 500;
-  font-size: 1.4rem;
-  color: rgba(0, 0, 0, 0.85);
-  margin-bottom: 2rem;
-`;
-
 const ItemList = styled.ul`
   display: flex;
   gap: 1.5rem;

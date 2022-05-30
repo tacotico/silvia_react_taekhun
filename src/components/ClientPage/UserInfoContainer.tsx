@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Icon from '@components/commons/Icon';
-import { UserInfoKeys, UserInfoType } from '@customTypes/user';
+import { UserInfoKeys, UserInfoType } from '@customTypes';
 import { userInfoKor } from '@lib/config/constants';
 
 interface Props {
@@ -87,11 +87,5 @@ const Label = styled.span`
   color: rgba(0, 0, 0, 0.45);
 `;
 const Text = styled.span``;
-
-const BgPattern = styled(Icon)`
-  position: absolute;
-  top: 0;
-  right: 0;
-`;
 
 export default UserInfoContainer;

@@ -1,4 +1,4 @@
-import { SessionType } from '@customTypes/session';
+import { SessionType } from '@customTypes';
 import { SESSION_LIST_ENDPOINT } from '@lib/config/constants';
 import { fetcher } from '.';
 
