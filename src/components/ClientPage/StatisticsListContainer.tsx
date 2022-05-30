@@ -10,11 +10,15 @@ const StatisticsListContainer = ({ statisticsList }: Props) => {
   return (
     <Wrapper>
       <ItemList>
-        {statisticsList.map(({ title, main, imgSrc, sub }, key) => (
-          <Item key={key}>
-            <UserStatisticsIcon imgSrc={imgSrc} title={title} main={main} sub={sub} />
-          </Item>
-        ))}
+        {statisticsList.length ? (
+          statisticsList.map(({ title, main, imgSrc, sub }, key) => (
+            <Item key={key}>
+              <UserStatisticsIcon imgSrc={imgSrc} title={title} main={main} sub={sub} />
+            </Item>
+          ))
+        ) : (
+          <></>
+        )}
       </ItemList>
     </Wrapper>
   );
